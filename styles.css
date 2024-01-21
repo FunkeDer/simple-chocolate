@@ -91,8 +91,14 @@ button{
 
 .start-page{
     border-radius: 30px;
-background: rgba(17, 17, 17, 0.60);
+    background-color: rgba(17, 17, 17, 0.60);
     padding: 381px 40px 40px 40px;
+    background-image: url(./images/chocolate-hero-desktop.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.hero-section{
     
 }
 
@@ -183,6 +189,7 @@ h1{
 .benefits-section ul{
     display: flex;
     justify-content: center;
+    align-items: center;
    gap: 80px;
    padding: 50px 0;
 }
@@ -227,21 +234,14 @@ h1{
 
 }
 
+
+
 .ingredients-container ul{
     display: flex;
     flex-wrap: wrap;
     flex-basis: 4;
     gap: 32px;
-}
-
-.ingredients-container li{
-    width: 260px;
-    height: 280px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    border-radius: 15px;
-
+    position: relative;
 }
 
 .ingredients-container ul li:nth-child(1),.ingredients-container ul li:nth-child(5){
@@ -261,12 +261,89 @@ color: white;
 }
 
 .ingredients-container ul li{
+    width: 260px;
+    height: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 15px;
     display: flex;
     justify-content: center;
-    align-items: left
-    ;
+    align-items: left;
+    position: relative;
+    overflow: hidden;
     
 }
+
+.ingredients-overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    transform: translatey(100%);
+    transition: transform 250ms ease-in-out;
+}
+
+.ingredients-container ul li:hover .ingredients-overlay {
+    transform: translatey(0);
+}
+
+
+
+.ingredients-overlay .overlay-title{
+    color: #111;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+}
+
+.overlay-button-container{
+    display: flex;
+    gap: 4px;
+    margin-left: 15px;
+}
+
+.overlay-button{
+    display: flex;
+    padding: 6px 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.2; /* 120% */
+}
+
+.orange{
+    border: none;
+    border-radius: 35px;
+    background:  #FD9222;
+    color: #fff;
+}
+
+.white{
+    border-radius: 35px;
+    border: 1px solid #FD9222;
+    background:  #FAFAFA;
+}
+
+.overlay-paragraph{
+    overflow: hidden;
+    color: #111;
+    font-size: 14px;
+    font-style: normal;
+    line-height: 1.29; 
+    letter-spacing: -0.02em;
+    margin-left: 15px;
+    margin-bottom: 25px;
+}
+
 
 .ingredients-container ul li h3{
     font-size: 14px;
@@ -281,6 +358,13 @@ color: white;
 .ingredients-container ul li img{
     margin-left: 23px;
 }
+.ingredients-arrow-img{
+    position: absolute;
+    top:14px;
+    left: 222px;
+    margin: 0!important; 
+}
+
 
 .production-section h2{
    text-align: center;
@@ -711,4 +795,10 @@ justify-content: center;
     transition: 0.3s;
     background-color: #FD9222;
     color:  #fff;
+}
+
+.vl{
+    background: rgba(255, 255, 255, 0.50);;
+    width: 1px;
+    height: 124px;
 }
