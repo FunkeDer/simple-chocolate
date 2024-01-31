@@ -11,7 +11,6 @@ h1,h2,h3,h4,h5,h6,ul,li,p{
 
 .container{
     max-width: 1136px;
-    width: 100%;
     padding: 0 15px;
     margin: 0 auto;
 }
@@ -94,6 +93,7 @@ button{
 .icons{
     gap: 14px;
     margin-left: 90px;
+    cursor: pointer;
 }
 
 .start-page{
@@ -105,7 +105,7 @@ button{
     background-repeat: no-repeat;
 }
 
-h1{
+.hero-title{
     margin: 0;
     padding: 0;
     color: #FFF;
@@ -194,20 +194,20 @@ h1{
     line-height: normal;
 }
 
-.benefits-section ul{
+.benefits-ul{
     display: flex;
     justify-content: center;
     align-items: center;
-   padding: 50px 18px;
-   
+    padding: 50px 18px;
 }
 
-.benefits-section li{
+.benefits-ul-li{
     display: flex;
     flex-direction: column;
     margin-right: 44px;
     margin-left: 44px;
     width: calc((100% - 176px) / 3);
+    max-height: 244;
 }
 
 .benefits-section li:first-child{
@@ -319,6 +319,7 @@ color: white;
     background-color: #fff;
     transform: translatey(100%);
     transition: transform 250ms ease-in-out;
+    padding: 20px 15px;
 }
 
 .ingredients-item:hover .ingredients-overlay {
@@ -335,12 +336,12 @@ color: white;
     line-height: normal;
     letter-spacing: -0.03em;
     text-transform: uppercase;
+    margin: 0!important;
 }
 
 .overlay-button-container{
     display: flex;
     gap: 4px;
-    margin-left: 15px;
 }
 
 .overlay-button{
@@ -375,8 +376,6 @@ color: white;
     font-style: normal;
     line-height: 1.29; 
     letter-spacing: -0.02em;
-    margin-left: 15px;
-    margin-bottom: 25px;
 }
 
 
@@ -480,7 +479,7 @@ align-items: center;
     flex-wrap: wrap;
 }
 
-.products ul li{
+.products-ul-li{
     width: 270px;
     height: 364px;
     border-radius: 15px;
@@ -544,7 +543,7 @@ align-items: center;
     color: #fff;
 }
 
-.products ul li img{
+.products-ul-li-img{
     margin: 32px 20px 8px 20px;
 }
 
@@ -605,6 +604,7 @@ align-items: center;
     border-radius: 15px 15px 0px 0px;
     background: linear-gradient(165deg, rgba(253, 253, 255, 0.10) 3.97%, rgba(8, 2, 21, 0.00) 109.76%);
     backdrop-filter: blur(7.5px);
+    color: white;
 }
 
 .sellers-overlay:hover .sellers-overlay-p{
@@ -637,14 +637,14 @@ align-items: center;
 margin-bottom: 91px;
 }
 
-.loved-section ul{
+.loved-ul{
     display: flex;
     gap: 28px;
     justify-content: center;
     margin: 50px 0;
 }
 
-.loved-section ul li{
+.loved-ul-li{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -704,7 +704,7 @@ margin-bottom: 91px;
    padding: 50px 0;
 }
 
-.footer-container h2{
+.footer-container-h2{
     color: #FFF;
     font-size: 28px;
     font-style: normal;
@@ -779,7 +779,7 @@ margin-bottom: 91px;
 }
 
 hr{
-    width: 1136px;
+    max-width: 1136px;
     height: 1px;
     background: rgba(255, 255, 255, 0.10);
     border: none;
@@ -822,7 +822,7 @@ transition: 0.3s;
 
 .footer-input{
     display: flex;
-    width: 313px;
+    max-width: 313px;
     height: 24px;
     background-color: inherit;
     padding: 14px 24px;
@@ -894,12 +894,120 @@ background-color: #FAFAFA;
 }
 
 
-@media(max-width:769px) {
+@media(max-width:1166px) {
+    .container{
+        max-width: 768px;
+    }
+    
+    
+
     .icons{
         margin-left: 48px;
     }
 
+    section{
+        margin: 0 auto;
+    }       
+
     .start-page{
+        
+        padding: 671px 40px 40px 40px;
+    }
+
+    .hero-section{
         max-width: 704px;
+        margin: 0 auto;
+    }
+
+    .hero-title{
+        padding: 0;
+        margin-bottom: 32px;
+    }
+
+    .benefits-ul{
+        flex-wrap: wrap;
+        justify-content: start;
+        align-items: baseline;
+        gap: 44px 88px;
+    }
+
+    .ingredients-ul{
+        gap: 30px;
+        align-items: center;
+        max-width: 704px;
+        margin: 0 auto;
+    }
+
+    .benefits-ul-li{
+        width: calc((100% - 88px) / 2);
+        max-height: 244px;
+        padding: 0;
+        margin: 0;
+    }
+
+    .vl{
+        display: none;
+    }
+
+    .ingredients-item{
+       width: 292px;
+    }
+
+    .ingredients-img{
+        margin-left: 50px;
+    }
+
+    .ingredients-arrow-img{
+        left: 298px;
+    }
+
+    .recepie-container{
+        min-width: 604px;
+    }
+
+    .products-ul{
+        gap: 30px;
+        align-items: center;
+        max-width: 704px;
+        margin: 0 auto;
+    }
+
+    .products-ul-li{
+        padding: 32px 52px;
+        width: auto;
+        height: auto;
+    }
+
+    .products-ul-li-img{
+        margin: 0;
+    }
+
+    .sellers-ul{
+        margin: 0 auto;
+    }
+
+    .loved-ul{
+        margin: 50px auto;
+    }
+
+    .sellers-ul-li:nth-child(3){
+        display: none;
+    }
+
+    .loved-ul-li:nth-child(3){
+        display: none;
+    }
+
+.footer-container-h2{
+    max-width: 300px;
+    display: block;
+}
+
+    .footer-input{
+        max-width: 233px;
+    }
+
+    .footer-button{
+        max-width: 128px;
     }
 }
