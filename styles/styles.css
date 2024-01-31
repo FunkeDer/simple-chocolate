@@ -125,7 +125,7 @@ button{
 
 }
 
-.start-link-section ul{
+.hero-ul{
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -268,7 +268,8 @@ text-transform: uppercase;
 }
 
 .ingredients-container{
-    margin-top: 50px;
+    padding-top: 50px;
+    margin: 0 auto;
 }
 
 
@@ -411,8 +412,8 @@ color: white;
 align-items: center;
 }
 
-.production-start-container img{
-    height: 400px;
+.production-img{
+    min-height: 400px;
 }
 
 .recepie-container{
@@ -894,13 +895,11 @@ background-color: #FAFAFA;
 }
 
 
-@media(max-width:1166px) {
+@media(max-width: 1166px) {
     .container{
         max-width: 768px;
     }
     
-    
-
     .icons{
         margin-left: 48px;
     }
@@ -910,7 +909,7 @@ background-color: #FAFAFA;
     }       
 
     .start-page{
-        
+        background-image: url(../images/chocolate_main_tablet.jpg);
         padding: 671px 40px 40px 40px;
     }
 
@@ -998,10 +997,10 @@ background-color: #FAFAFA;
         display: none;
     }
 
-.footer-container-h2{
-    max-width: 300px;
-    display: block;
-}
+    .footer-container-h2{
+        max-width: 300px;
+        display: block;
+    }
 
     .footer-input{
         max-width: 233px;
@@ -1010,4 +1009,81 @@ background-color: #FAFAFA;
     .footer-button{
         max-width: 128px;
     }
+}
+
+@media(max-width: 768px) {
+    .links{
+        display: none;
+    }
+
+    .icons{
+        display: none;
+    }
+
+    .start-page{
+        padding: 395px 20px 20px 20px;
+        background-image: url(../images/chocolate_main_phone.jpg);
+    }
+
+    .start-link-section{
+        flex-direction: column;
+        align-items: baseline;
+        justify-items: center;
+    }
+
+    .start-li-navigation{
+        display: flex;
+        padding: 12px 28px;
+        align-items: flex-start;
+        gap: 14px;
+        border-radius: 100px;
+        background: #FD9222;
+    }
+
+    .start-li-navigation-second{
+        display: flex;
+        padding: 12px 28px;
+        align-items: center;
+        border-radius: 100px;
+        border: 1px solid #FFF;
+    }
+
+    .hero-title {
+        font-size: 20px;
+        line-height: 1.2; /* 120% */
+        letter-spacing: -0.6px;
+    }
+
+    .start-link-section{
+        gap: 32px;
+    }
+
+    .start-li-navigation-a{
+        color: #FFF;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    }
+
+    .benefits-ul{
+        flex-direction: column;
+        gap: 38px;
+    }
+
+    .benefits-ul-li{
+        margin: 0;
+        width: auto;    
+        max-width: 308px;
+    }
+
+    .ingredients-item:nth-child(2n+2){
+        display: none;
+    }
+
+    .production-img{
+        max-width: 375px;
+    }
+
 }

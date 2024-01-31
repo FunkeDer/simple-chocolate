@@ -38,11 +38,11 @@
                         <div class="start-page">
                             <h1 class="hero-title">Treat yourself or a loved one to our finest ingredients for a moment of pure delight!</h1>
                                 <div class="start-link-section">
-                                    <ul >
+                                    <ul class="hero-ul ">
                                         <li class="start-li-navigation"><a href="" class="start-li-navigation-a">Buy now</a></li>
                                         <li class="start-li-navigation-second"><a href=""class="start-li-navigation-a" >How it’s made</a></li>
                                     </ul>
-                                    <ul>
+                                    <ul class="hero-ul">
                                         <li><p>scroll down</p></li>
                                         <li>
                                             <div class="navigation-elipse">
@@ -190,7 +190,11 @@
             <div class="container">
             <h2 class="products-h2">HOW IT’S <span style="color: #FD9222;">MADE?</span></h2>
             <div class="production-start-container">
-                <img src="./images/chocolate.jpg" alt="chocolate">
+                <img class="production-image" 
+                srcset="./images/chocolate.jpg 600w, ./images/chocolate-cooking-phone.jpg 375w"
+                sizes="(min-width: 1166px) 600px, (max-width: 1400px) 600px, (max-width: 375px) 375px"
+                src="./images/chocolate.jpg" alt="chocolate">
+           
                 <div class="recepie-container"> 
                     <h3 class="production-ul-h3">Try  our chocolates today and <br> discover the perfect balance of flavor</h3>
                     <ul class="production-ul">
