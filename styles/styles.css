@@ -1095,9 +1095,15 @@ background-color: #FAFAFA;
         max-height: 456px;
     }
 
+    .production-image{
+        height: 400px;
+    }
+
     .products-ul{
         justify-content: center;
     }
+
+
 
     .sellers-ul-li:nth-child(2){
         display: none;
@@ -1134,5 +1140,28 @@ background-color: #FAFAFA;
     .footer-ul{
         flex-direction: column;
         margin-bottom: 32px;
+    }
+}
+
+@media (max-width: 396px){
+    .sellers-ul-li{
+        width: 290px;
+    }
+
+    .production-image{
+        height: 400px;
+    }
+
+    .products-ul-li{
+        padding: 15px ;
+    }
+
+
+    .footer-input-container{
+        flex-direction: column;
+    }
+
+    .sellers-ul-li{
+        width: 290px;
     }
 }
