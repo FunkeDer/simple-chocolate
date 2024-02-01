@@ -1082,8 +1082,57 @@ background-color: #FAFAFA;
         display: none;
     }
 
+    .ingredients-ul{
+        justify-content: center;
+    }
+
     .production-img{
         max-width: 375px;
     }
 
+    .recepie-container{
+        min-width: auto;
+        max-height: 456px;
+    }
+
+    .products-ul{
+        justify-content: center;
+    }
+
+    .sellers-ul-li:nth-child(2){
+        display: none;
+    }
+
+    .loved-ul-li:first-child{
+        display: none;
+    }
+
+    .footer-container{
+        flex-direction: column;
+        align-items: baseline;
+    }
+
+    .footer-links{
+        flex-direction: column-reverse;
+        align-items: baseline;
+        margin-top: 32px;
+        gap: 32px;
+    }
+
+    .footer-social-networks{
+        align-items: baseline;
+    }
+    .footer-social-networks ul{
+        margin-top: 0;
+    }
+
+    .footer-nav{
+        flex-direction: column;
+        align-items: baseline;
+    }
+
+    .footer-ul{
+        flex-direction: column;
+        margin-bottom: 32px;
+    }
 }
