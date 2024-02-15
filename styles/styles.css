@@ -746,7 +746,6 @@ margin-bottom: 91px;
 .footer-contacts-container {
     display: flex;
     flex-direction: column;
-   
     justify-content: center;
 }
 
@@ -1165,3 +1164,242 @@ background-color: #FAFAFA;
         width: 290px;
     }
 }
+
+.backdrop-container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(46, 47, 66, 0.4);
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-container{
+    min-height: 743px;
+    border-radius: 15px;
+    background-color: #FAFAFA;
+    max-width: 491px;
+    width: 517px;
+    padding: 0 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.modal-svg-close{
+    position: absolute;
+    top: 24px;
+    cursor: pointer;
+    right: 24px;
+    stroke: #111;
+    transition-duration: 0.3s;
+}
+
+.modal-svg-close:hover{
+    stroke: #FD9222;
+    transition-duration: 0.3s;
+}
+
+.modal-input-block{
+    position: relative;
+}
+
+.modal-text{
+
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.17; /* 116.667% */
+    letter-spacing: -0.04em;
+    text-transform: uppercase;
+    margin-top: 40px;
+    margin-bottom: 42px;
+}
+
+.modal-span-text{
+    color: #FD9222;
+    display: block;
+
+}
+
+.modal-from{
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.modal-label{
+    color: rgba(64, 64, 64, 0.30);
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.02em;
+}
+
+.modal-input-container{
+    position: relative;
+}
+
+.modal-input{
+    width: calc(100% - 62px);
+    border-radius: 13px;
+    border: 1.5px solid rgba(17, 17, 17, 0.05);
+    box-shadow: 0px 5.445px 5.445px 0px rgba(0, 0, 0, 0.03);
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    outline: transparent;
+    height: 68px;
+    padding-left: 63px;
+}
+
+.modal-input:focus{
+    border-color: #FD9222;
+
+}
+
+ .modal-input:focus  + .modal-svg-input{
+    stroke: #FD9222;
+}
+
+.modal-textarea{
+    border-radius: 13px;
+    border: 1.5px solid rgba(17, 17, 17, 0.05);
+    width: 100%;
+    min-height: 137px;
+    resize: none;
+    outline: none;
+}
+
+.modal-svg-input{
+    stroke: #111;
+    fill: none;
+    transition-duration: 0.3s;
+    position: absolute;
+    top: 50%;
+    left: 24px;
+    transform: translateY(-50%);
+}
+
+.modal-svg-input:focus{
+    stroke: #FD9222;
+    transition-duration: 0.3s;
+}
+
+
+@keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fade-out {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+  .backdrop-container {
+    box-shadow: var(--shadow-2), 0 0 0 100vw rgb(0 0 0 / 0.5);
+    color: #222;
+    border: 0;
+    border-radius: 0.25rem;
+  }
+  
+  .backdrop-container::backdrop {
+    background: rgb(0 0 0 / 0.5);
+    opacity: 0;
+  }
+  
+  .backdrop-container[open] {
+    animation:  fade-in 500ms forwards;
+  }
+
+  .backdrop-container[closing] {
+    inset: 0;
+    animation: fade-out 500ms forwards;
+  }
+
+.module-privacy-container{
+    display: flex;
+    gap: 12px;
+}
+
+.privacy-span{
+    color: #FD9222;
+    text-decoration-line: underline;
+}
+
+
+.module-submit-button{
+    padding: 14px 40px;
+    border-radius: 100px;
+    background: #FD9222;
+    border: none;
+    text-align: center;
+    color: #FFF;
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-bottom: 40px;
+}
+
+.modal-checkbox:checked {
+    background-color: #FD9222;
+    fill: #F4F4FD;
+}
+
+.modal-checkbox:checked{
+    background-color: #404bbf;
+    fill:#F4F4FD;
+  }
+
+  .modal-span{
+    border-radius: 6px;
+    border: 1px solid rgba(17, 17, 17, 0.14);
+    width: 17px;
+    height: 17px;
+    margin-right: 12px;
+    display: inline-block;
+    position: relative;
+  }
+
+  .modal-privacy-label{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+ 
+
+.modal-privacy-label {
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    color: #8e8f99;
+}
+
+.modal-svg {
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -45%);
+    fill: #fff;
+    transition-duration:  250ms;
+
+}
+
+.modal-checkbox:checked + .modal-privacy-label .modal-span {
+    fill: #fff;
+    background-color: #FD9222;
+    transition-duration:  250ms;
+  }
