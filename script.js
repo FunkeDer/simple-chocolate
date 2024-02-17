@@ -18,3 +18,22 @@ closeModal.addEventListener("click", () => {
     { once: true }
   );
 });
+
+const mobileOpenButton = document.getElementById("mobile_open");
+const mobileCloseButton = document.getElementById("mobile_close");
+const mobileContainer = document.getElementById("mobile_container");
+const mobileNavItem = document.getElementById("mobile_nav_item")
+
+// Add event listener to the open button
+mobileOpenButton.addEventListener('click', () => {
+  mobileContainer.style.cssText = 'display: flex; '; // Show the mobile menu
+});
+
+function closeMobileMenu () {
+  mobileContainer.style.cssText = 'visibility: hidden; display:none;'; // Show the mobile menu
+}
+
+mobileCloseButton.addEventListener('click', closeMobileMenu)
+
+mobileNavItem.addEventListener('click', closeMobileMenu)
+

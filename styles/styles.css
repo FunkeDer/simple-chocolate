@@ -96,6 +96,57 @@ button{
     cursor: pointer;
 }
 
+.mobile-menu-button-svg{
+    display: none;
+}
+
+
+.mobile-menu-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #1E1823;
+    height: calc(100vh - 40px); /* Subtract 20px padding from top and bottom */
+    width: calc(100vw - 40px); /* Subtract 20px padding from left and right */
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    display: none;
+ }
+
+.mobile-svg{
+    stroke: #fff;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+.mobile-menu-links{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-top: 108px;
+    margin-left: 48px;
+}
+
+.mobile-menu-item a{
+    color: white;
+    transition-duration: 0.3s;
+}
+
+.mobile-menu-item a:hover{
+    color: #FD9222;
+    transition-duration: 0.3s;
+
+}
+
+.mobile-menu-social{
+    display: flex;
+    gap: 12px;
+}
+
 .start-page{
     border-radius: 30px;
     background-color: rgba(17, 17, 17, 0.60);
@@ -893,278 +944,6 @@ background-color: #FAFAFA;
     height: 124px;
 }
 
-
-@media(max-width: 1166px) {
-    .container{
-        max-width: 768px;
-    }
-    
-    .icons{
-        margin-left: 48px;
-    }
-
-    section{
-        margin: 0 auto;
-    }       
-
-    .start-page{
-        background-image: url(../images/chocolate_main_tablet.jpg);
-        padding: 671px 40px 40px 40px;
-    }
-
-    .hero-section{
-        max-width: 704px;
-        margin: 0 auto;
-    }
-
-    .hero-title{
-        padding: 0;
-        margin-bottom: 32px;
-    }
-
-    .benefits-ul{
-        flex-wrap: wrap;
-        justify-content: start;
-        align-items: baseline;
-        gap: 44px 88px;
-    }
-
-    .ingredients-ul{
-        gap: 30px;
-        align-items: center;
-        max-width: 704px;
-        margin: 0 auto;
-    }
-
-    .benefits-ul-li{
-        width: calc((100% - 88px) / 2);
-        max-height: 244px;
-        padding: 0;
-        margin: 0;
-    }
-
-    .vl{
-        display: none;
-    }
-
-    .ingredients-item{
-       width: 292px;
-    }
-
-    .ingredients-img{
-        margin-left: 50px;
-    }
-
-    .ingredients-arrow-img{
-        left: 298px;
-    }
-
-    .recepie-container{
-        min-width: 604px;
-    }
-
-    .products-ul{
-        gap: 30px;
-        align-items: center;
-        max-width: 704px;
-        margin: 0 auto;
-    }
-
-    .products-ul-li{
-        padding: 32px 52px;
-        width: auto;
-        height: auto;
-    }
-
-    .products-ul-li-img{
-        margin: 0;
-    }
-
-    .sellers-ul{
-        margin: 0 auto;
-    }
-
-    .loved-ul{
-        margin: 50px auto;
-    }
-
-    .sellers-ul-li:nth-child(3){
-        display: none;
-    }
-
-    .loved-ul-li:nth-child(3){
-        display: none;
-    }
-
-    .footer-container-h2{
-        max-width: 300px;
-        display: block;
-    }
-
-    .footer-input{
-        max-width: 233px;
-    }
-
-    .footer-button{
-        max-width: 128px;
-    }
-}
-
-@media(max-width: 768px) {
-    .links{
-        display: none;
-    }
-
-    .icons{
-        display: none;
-    }
-
-    .start-page{
-        padding: 395px 20px 20px 20px;
-        background-image: url(../images/chocolate_main_phone.jpg);
-    }
-
-    .start-link-section{
-        flex-direction: column;
-        align-items: baseline;
-        justify-items: center;
-    }
-
-    .start-li-navigation{
-        display: flex;
-        padding: 12px 28px;
-        align-items: flex-start;
-        gap: 14px;
-        border-radius: 100px;
-        background: #FD9222;
-    }
-
-    .start-li-navigation-second{
-        display: flex;
-        padding: 12px 28px;
-        align-items: center;
-        border-radius: 100px;
-        border: 1px solid #FFF;
-    }
-
-    .hero-title {
-        font-size: 20px;
-        line-height: 1.2; /* 120% */
-        letter-spacing: -0.6px;
-    }
-
-    .start-link-section{
-        gap: 32px;
-    }
-
-    .start-li-navigation-a{
-        color: #FFF;
-    font-family: Montserrat;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-    }
-
-    .benefits-ul{
-        flex-direction: column;
-        gap: 38px;
-    }
-
-    .benefits-ul-li{
-        margin: 0;
-        width: auto;    
-        max-width: 308px;
-    }
-
-    .ingredients-item:nth-child(2n+2){
-        display: none;
-    }
-
-    .ingredients-ul{
-        justify-content: center;
-    }
-
-    .production-img{
-        max-width: 375px;
-    }
-
-    .recepie-container{
-        min-width: auto;
-        max-height: 456px;
-    }
-
-    .production-image{
-        height: 400px;
-    }
-
-    .products-ul{
-        justify-content: center;
-    }
-
-
-
-    .sellers-ul-li:nth-child(2){
-        display: none;
-    }
-
-    .loved-ul-li:first-child{
-        display: none;
-    }
-
-    .footer-container{
-        flex-direction: column;
-        align-items: baseline;
-    }
-
-    .footer-links{
-        flex-direction: column-reverse;
-        align-items: baseline;
-        margin-top: 32px;
-        gap: 32px;
-    }
-
-    .footer-social-networks{
-        align-items: baseline;
-    }
-    .footer-social-networks ul{
-        margin-top: 0;
-    }
-
-    .footer-nav{
-        flex-direction: column;
-        align-items: baseline;
-    }
-
-    .footer-ul{
-        flex-direction: column;
-        margin-bottom: 32px;
-    }
-}
-
-@media (max-width: 396px){
-    .sellers-ul-li{
-        width: 290px;
-    }
-
-    .production-image{
-        height: 400px;
-    }
-
-    .products-ul-li{
-        padding: 15px ;
-    }
-
-
-    .footer-input-container{
-        flex-direction: column;
-    }
-
-    .sellers-ul-li{
-        width: 290px;
-    }
-}
-
 .backdrop-container{
     position: fixed;
     top: 0;
@@ -1180,7 +959,8 @@ background-color: #FAFAFA;
     border-radius: 15px;
     background-color: #FAFAFA;
     max-width: 491px;
-    width: 517px;
+    min-width: 270px;
+    /* max-width: 517px; */
     padding: 0 40px;
     position: absolute;
     top: 50%;
@@ -1310,15 +1090,18 @@ background-color: #FAFAFA;
     color: #222;
     border: 0;
     border-radius: 0.25rem;
+ 
   }
   
   .backdrop-container::backdrop {
     background: rgb(0 0 0 / 0.5);
     opacity: 0;
+    
   }
   
   .backdrop-container[open] {
     animation:  fade-in 500ms forwards;
+   
   }
 
   .backdrop-container[closing] {
@@ -1370,6 +1153,7 @@ background-color: #FAFAFA;
     margin-right: 12px;
     display: inline-block;
     position: relative;
+    flex-shrink: 0;
   }
 
   .modal-privacy-label{
@@ -1403,3 +1187,304 @@ background-color: #FAFAFA;
     background-color: #FD9222;
     transition-duration:  250ms;
   }
+
+
+.overflow{
+    overflow-x: hidden;
+}
+
+@media(max-width: 1166px) {
+    .container{
+        max-width: 768px;
+    }
+    
+    .icons{
+        margin-left: 48px;
+    }
+
+    section{
+        margin: 0 auto;
+    }       
+
+    .start-page{
+        background-image: url(../images/chocolate_main_tablet.jpg);
+        padding: 671px 40px 40px 40px;
+    }
+
+    .hero-section{
+        max-width: 704px;
+        margin: 0 auto;
+    }
+
+    .hero-title{
+        padding: 0;
+        margin-bottom: 32px;
+    }
+
+    .benefits-ul{
+        flex-wrap: wrap;
+        justify-content: start;
+        align-items: baseline;
+        gap: 44px 88px;
+    }
+
+    .ingredients-ul{
+        gap: 30px;
+        align-items: center;
+        max-width: 704px;
+        margin: 0 auto;
+    }
+
+    .benefits-ul-li{
+        width: calc((100% - 88px) / 2);
+        max-height: 244px;
+        padding: 0;
+        margin: 0;
+    }
+
+    .vl{
+        display: none;
+    }
+
+    .ingredients-item{
+       width: 292px;
+    }
+
+    .ingredients-img{
+        margin-left: 50px;
+    }
+
+    .ingredients-arrow-img{
+        left: 298px;
+    }
+
+    .recepie-container{
+        min-width: 604px;
+    }
+
+    .products-ul{
+        gap: 30px;
+        align-items: center;
+        max-width: 704px;
+        margin: 0 auto;
+    }
+
+    .products-ul-li{
+        padding: 32px 52px;
+        width: auto;
+        height: auto;
+    }
+
+    .products-ul-li-img{
+        margin: 0;
+    }
+
+    .sellers-ul{
+        margin: 0 auto;
+    }
+
+    .loved-ul{
+        margin: 50px auto;
+    }
+
+    .sellers-ul-li:nth-child(3){
+        display: none;
+    }
+
+    .loved-ul-li:nth-child(3){
+        display: none;
+    }
+
+    .footer-container-h2{
+        max-width: 300px;
+        display: block;
+    }
+
+    .footer-input{
+        max-width: 233px;
+    }
+
+    .footer-button{
+        max-width: 128px;
+    }
+}
+
+@media(max-width: 768px) {
+
+    .navigation-bar{
+        justify-content: space-between;
+    }
+
+    .mobile-menu-button-svg{
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    .links{
+        display: none;
+    }
+
+    .icons{
+        display: none;
+    }
+
+    .start-page{
+        padding: 395px 20px 20px 20px;
+        background-image: url(../images/chocolate_main_phone.jpg);
+    }
+
+    .start-link-section{
+        flex-direction: column;
+        align-items: baseline;
+        justify-items: center;
+    }
+
+    .start-li-navigation{
+        display: flex;
+        padding: 12px 28px;
+        align-items: flex-start;
+        gap: 14px;
+        border-radius: 100px;
+        background: #FD9222;
+    }
+
+    .start-li-navigation-second{
+        display: flex;
+        padding: 12px 28px;
+        align-items: center;
+        border-radius: 100px;
+        border: 1px solid #FFF;
+    }
+
+    .hero-title {
+        font-size: 20px;
+        line-height: 1.2; /* 120% */
+        letter-spacing: -0.6px;
+    }
+
+    .start-link-section{
+        gap: 32px;
+    }
+
+    .start-li-navigation-a{
+        color: #FFF;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    }
+
+    .benefits-ul{
+        flex-direction: column;
+        gap: 38px;
+    }
+
+    .benefits-ul-li{
+        margin: 0;
+        width: auto;    
+        max-width: 308px;
+    }
+
+    .ingredients-item:nth-child(2n+2){
+        display: none;
+    }
+
+    .ingredients-ul{
+        justify-content: center;
+    }
+
+    .production-img{
+        max-width: 375px;
+    }
+
+    .recepie-container{
+        min-width: auto;
+        max-height: 456px;
+    }
+
+    .production-image{
+        height: 400px;
+    }
+
+    .products-ul{
+        justify-content: center;
+    }
+
+
+
+    .sellers-ul-li:nth-child(2){
+        display: none;
+    }
+
+    .loved-ul-li:first-child{
+        display: none;
+    }
+
+    .footer-container{
+        flex-direction: column;
+        align-items: baseline;
+    }
+
+    .footer-links{
+        flex-direction: column-reverse;
+        align-items: baseline;
+        margin-top: 32px;
+        gap: 32px;
+    }
+
+    .footer-social-networks{
+        align-items: baseline;
+    }
+    .footer-social-networks ul{
+        margin-top: 0;
+    }
+
+    .footer-nav{
+        flex-direction: column;
+        align-items: baseline;
+    }
+
+    .footer-ul{
+        flex-direction: column;
+        margin-bottom: 32px;
+    }
+    input::placeholder{
+        color: transparent;
+    }
+}
+
+@media (max-width: 396px){
+
+
+
+    .sellers-ul-li{
+        width: 290px;
+    }
+
+    .production-image{
+        height: 400px;
+    }
+
+    .products-ul-li{
+        padding: 15px ;
+    }
+
+
+    .footer-input-container{
+        flex-direction: column;
+    }
+
+    .sellers-ul-li{
+        width: 290px;
+    }
+
+    .form-container{
+        padding: 0 20px;
+    }
+
+   .mobile-menu-container{
+    display: flex;
+   }
+}
+
